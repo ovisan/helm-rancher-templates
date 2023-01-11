@@ -1,0 +1,44 @@
+{{- $clustername := .Values.cluster.name }}
+apiVersion: rke-machine-config.cattle.io/v1
+kind: VmwarevsphereConfig
+metadata:
+  name: {{ $clustername }}-master
+  namespace: fleet-default
+cfgparam:
+- disk.enableUUID=TRUE
+cloneFrom: /FDZ-Datacenter/vm/VMs/fdz/Template/RHEL86-k8s-node-2022-11-07
+cloudConfig: |+
+  #cloud-config
+
+cloudinit: null
+common:
+  labels: null
+  taints: []
+contentLibrary: null
+cpuCount: "2"
+creationType: template
+customAttribute: []
+datacenter: /FDZ-Datacenter
+datastore: /FDZ-Datacenter/datastore/Projekte/fdz/tir-esx-fdz_ds001_fdz
+datastoreCluster: null
+diskSize: "64000"
+folder: /FDZ-Datacenter/vm/VMs/fdz/PROD/{{ $clustername }}
+hostsystem: null
+memorySize: "4096"
+network:
+- /FDZ-Datacenter/network/Projekte/fdz-mgmt
+os: linux
+password: null
+pool: /FDZ-Datacenter/host/tir-esx-fdz/Resources/fdz
+sshPassword: tcuser
+sshPort: "22"
+sshUser: docker
+sshUserGroup: staff
+tag: []
+username: null
+vappIpallocationpolicy: null
+vappIpprotocol: null
+vappProperty: []
+vappTransport: null
+vcenter: null
+vcenterPort: "443"
