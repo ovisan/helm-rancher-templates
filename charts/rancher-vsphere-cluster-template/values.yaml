@@ -10,7 +10,7 @@ cluster:
   annotations: {}
 
 # specify cloud credential secret name, do not need to be provided if using custom driver
-cloudCredentialSecretName: "cattle-global-data:cc-tg8kp"
+cloudCredentialSecretName: ""
 
 # specify s3 credential secret name
-s3CredentialSecretName: ""
+# s3CredentialSecretName: ""
