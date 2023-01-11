@@ -25,6 +25,8 @@ spec:
   - name: NO_PROXY
     value: "127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,.fdz-mgmt.tc,.bdr.de,.bdr.fdz,.prd.fdz.tir.budru.de,.nat.tc,.fdz.tir.bdr.de\r"
   rkeConfig:
+    chartValues:
+      rke2-calico: {}
     # etcd:
     #   disableSnapshots: false
     #   s3:
@@ -107,7 +109,7 @@ spec:
     - controlPlaneRole: false
       etcdRole: false
       workerRole: true
-      quantity: 2
+      quantity: 1
       name: {{ $clustername }}-worker
       machineConfigRef:
         kind: VmwarevsphereConfig
@@ -118,3 +120,8 @@ spec:
       cni: calico
       disable-kube-proxy: false
       etcd-expose-metrics: false
+      profile: null
+    machineSelector-Config:
+      - config:
+          cloud-provider-name: rancher-vsphere
+          protect-kernel-defaults: false
