@@ -26,6 +26,12 @@ spec:
     value: "127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,.fdz-mgmt.tc,.bdr.de,.bdr.fdz,.prd.fdz.tir.budru.de,.nat.tc,.fdz.tir.bdr.de\r"
   rkeConfig:
     chartValues:
+      rancher-vsphere-cpi:
+        vCenter:
+          datacenter: datacenter
+          host: vcenter.host
+          password: password
+          username: username
       rke2-calico: {}
     # etcd:
     #   disableSnapshots: false
