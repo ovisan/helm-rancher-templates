@@ -30,8 +30,13 @@ spec:
         vCenter:
           datacenter: datacenter
           host: vcenter.host
+          insecureFlag: true
+          port: 443
           password: password
           username: username
+          credentialsSecret:
+            name: "vsphere-cpi-creds"
+            generate: true
       rancher-vsphere=csi:
         storageClass:
           enabled: false
