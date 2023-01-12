@@ -121,6 +121,8 @@ spec:
       disable-kube-proxy: false
       etcd-expose-metrics: false
       profile: null
+      tls-san:
+        - fqdn.load.balancer
     machineSelector-Config:
       - config:
           cloud-provider-name: rancher-vsphere
