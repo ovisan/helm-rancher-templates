@@ -32,6 +32,34 @@ spec:
           host: vcenter.host
           password: password
           username: username
+      rancher-vsphere=csi:
+        storageClass:
+          enabled: false
+        vCenter:
+          datacenters: datacenter
+          host: host
+          password: password
+          username: username
+        asyncQueryVolume:
+          enabled: true
+        csiAuthCheck:
+          enabled: true
+        csiController:
+          csiResizer:
+            enabled: true
+        csiMigration:
+          enabled: true
+        blockVolumeSnapshot:
+          enabled: true
+        improvedCsiIdempotency:
+          enabled: true
+        onlineVolumeExtend:
+          enabled: true
+        storageClass:
+          allowVolumeExpansion: true
+          datastoreURL: ds:///vmfs/volumes/561cefe9-c48b8eaa/
+        triggerCsiFullsync:
+          enabled: true
       rke2-calico: {}
     # etcd:
     #   disableSnapshots: false
