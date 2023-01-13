@@ -2,7 +2,7 @@
 apiVersion: rke-machine-config.cattle.io/v1
 kind: VmwarevsphereConfig
 metadata:
-  name: {{ $clustername }}-worker
+  name: worker
   namespace: fleet-default
 boot2dockerUrl: null
 cfgparam:

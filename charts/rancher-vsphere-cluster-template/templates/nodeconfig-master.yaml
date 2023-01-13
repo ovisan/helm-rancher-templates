@@ -2,7 +2,7 @@
 apiVersion: rke-machine-config.cattle.io/v1
 kind: VmwarevsphereConfig
 metadata:
-  name: {{ $clustername }}-master
+  name: master
   namespace: fleet-default
 cfgparam:
 - disk.enableUUID=TRUE
