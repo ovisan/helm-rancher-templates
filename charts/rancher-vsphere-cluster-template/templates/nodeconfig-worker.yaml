@@ -31,10 +31,6 @@ network:
 os: linux
 password: null
 pool: /FDZ-Datacenter/host/tir-esx-fdz/Resources/fdz
-sshPassword: tcuser
-sshPort: "22"
-sshUser: docker
-sshUserGroup: staff
 username: null
 vappIpallocationpolicy: null
 vappIpprotocol: null
