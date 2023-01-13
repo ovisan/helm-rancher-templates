@@ -143,20 +143,20 @@ spec:
       etcdRole: true
       workerRole: false
       quantity: 3
-      name: {{ $clustername }}-master
+      name: master
       machineConfigRef:
         kind: VmwarevsphereConfig
-        name: {{ $clustername }}-master
+        name: master
       paused: false
       displayName: {{ $clustername }}-master
     - controlPlaneRole: false
       etcdRole: false
       workerRole: true
       quantity: 1
-      name: {{ $clustername }}-worker
+      name: worker
       machineConfigRef:
         kind: VmwarevsphereConfig
-        name: {{ $clustername }}-worker
+        name: worker
       paused: false
       displayName: {{ $clustername }}-worker
     machineGlobalConfig:
