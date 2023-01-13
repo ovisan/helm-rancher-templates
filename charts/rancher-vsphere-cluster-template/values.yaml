@@ -14,3 +14,14 @@ cloudCredentialSecretName: ""
 
 # specify s3 credential secret name
 # s3CredentialSecretName: ""
+
+vCenter:
+  host: ""
+  port: 443
+  insecureFlag: true
+  datacenters: ""
+  username: ""
+  password: ""
+  credentialsSecret:
+    name: "vsphere-cpi-creds"
+    generate: true
