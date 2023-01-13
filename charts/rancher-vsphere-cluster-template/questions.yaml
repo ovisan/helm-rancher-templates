@@ -10,11 +10,11 @@ questions:
     label: "CloudCredential Name"
     type: cloudcredential
     group: "General"
-  # - variable: s3CredentialSecretName
-  #   description: "Credential for S3 snapshot backup"
-  #   label: "S3 credential name"
-  #   type: cloudcredential
-  #   group: "General"
+  - variable: s3CredentialSecretName
+    description: "Credential for S3 snapshot backup"
+    label: "S3 credential name"
+    type: cloudcredential
+    group: "General"
   - variable: vCenter.host
     label: vCenter Host
     description: IP address or FQDN of the vCenter
