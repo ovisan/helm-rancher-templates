@@ -159,6 +159,10 @@ spec:
         name: worker
       paused: false
       displayName: {{ $clustername }}-worker
+    machineSelector-Config:
+      - config:
+          cloud-provider-name: vsphere
+          protect-kernel-defaults: false
     machineGlobalConfig:
       cni: calico
       disable-kube-proxy: false
@@ -166,7 +170,3 @@ spec:
       profile: null
       tls-san:
         - fqdn.load.balancer
-    machineSelector-Config:
-      - config:
-          cloud-provider-name: rancher-vsphere
-          protect-kernel-defaults: false
