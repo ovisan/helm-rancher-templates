@@ -1,7 +1,7 @@
 questions:
   - variable: cluster.name
     description: "Specify the name of the cluster"
-    label: "Cluster Name"
+    label: "Cluster Name - Must manually create the folder in vsphere /FDZ-Datacenter/vm/VMs/fdz/PROD/{{ clustername }}"
     required: true
     type: string
     group: "General"
