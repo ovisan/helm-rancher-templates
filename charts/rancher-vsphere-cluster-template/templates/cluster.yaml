@@ -25,6 +25,10 @@ spec:
   - name: NO_PROXY
     value: "127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,.fdz-mgmt.tc,.bdr.de,.bdr.fdz,.prd.fdz.tir.budru.de,.nat.tc,.fdz.tir.bdr.de\r"
   rkeConfig:
+    machineSelector-Config:
+      - config:
+          cloud-provider-name: vsphere
+          protect-kernel-defaults: false
     chartValues:
       rancher-vsphere-cpi:
         vCenter:
@@ -159,10 +163,6 @@ spec:
         name: worker
       paused: false
       displayName: {{ $clustername }}-worker
-    machineSelector-Config:
-      - config:
-          cloud-provider-name: vsphere
-          protect-kernel-defaults: false
     machineGlobalConfig:
       cni: calico
       disable-kube-proxy: false
