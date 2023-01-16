@@ -30,50 +30,50 @@ spec:
           cloud-provider-name: vsphere
           protect-kernel-defaults: false
     chartValues:
-      rancher-vsphere-cpi:
-        vCenter:
-          datacenter: {{ .Values.vCenter.datacenters | quote }}
-          host: {{ .Values.vCenter.host | quote }}
-          insecureFlag: {{ .Values.vCenter.insecureFlag | quote }}
-          port: {{ .Values.vCenter.port | quote }}
-          password: {{ .Values.vCenter.password | quote }}
-          username: {{ .Values.vCenter.username | quote }}
-          credentialsSecret:
-            name: "vsphere-cpi-creds"
-            generate: true
-      rancher-vsphere-csi:
-        storageClass:
-          enabled: false
-        vCenter:
-          datacenter: {{ .Values.vCenter.datacenters | quote }}
-          host: {{ .Values.vCenter.host | quote }}
-          insecureFlag: {{ .Values.vCenter.insecureFlag | quote }}
-          port: {{ .Values.vCenter.port | quote }}
-          password: {{ .Values.vCenter.password | quote }}
-          username: {{ .Values.vCenter.username | quote }}
-          credentialsSecret:
-            name: "vsphere-cpi-creds"
-            generate: true
-        asyncQueryVolume:
-          enabled: true
-        csiAuthCheck:
-          enabled: true
-        csiController:
-          csiResizer:
-            enabled: true
-        csiMigration:
-          enabled: true
-        blockVolumeSnapshot:
-          enabled: true
-        improvedCsiIdempotency:
-          enabled: true
-        onlineVolumeExtend:
-          enabled: true
-        storageClass:
-          allowVolumeExpansion: true
-          datastoreURL: ds:///vmfs/volumes/561cefe9-c48b8eaa/
-        triggerCsiFullsync:
-          enabled: true
+      #rancher-vsphere-cpi:
+      #  vCenter:
+      #    datacenter: {{ .Values.vCenter.datacenters | quote }}
+      #    host: {{ .Values.vCenter.host | quote }}
+      #    insecureFlag: {{ .Values.vCenter.insecureFlag | quote }}
+      #    port: {{ .Values.vCenter.port | quote }}
+      #    password: {{ .Values.vCenter.password | quote }}
+      #    username: {{ .Values.vCenter.username | quote }}
+      #    credentialsSecret:
+      #      name: "vsphere-cpi-creds"
+      #      generate: true
+      #rancher-vsphere-csi:
+      #  storageClass:
+      #    enabled: false
+      #  vCenter:
+      #    datacenter: {{ .Values.vCenter.datacenters | quote }}
+      #    host: {{ .Values.vCenter.host | quote }}
+      #    insecureFlag: {{ .Values.vCenter.insecureFlag | quote }}
+      #    port: {{ .Values.vCenter.port | quote }}
+      #    password: {{ .Values.vCenter.password | quote }}
+      #    username: {{ .Values.vCenter.username | quote }}
+      #    credentialsSecret:
+      #      name: "vsphere-cpi-creds"
+      #      generate: true
+      #  asyncQueryVolume:
+      #    enabled: true
+      #  csiAuthCheck:
+      #    enabled: true
+      #  csiController:
+      #    csiResizer:
+      #      enabled: true
+      #  csiMigration:
+      #    enabled: true
+      #  blockVolumeSnapshot:
+      #    enabled: true
+      #  improvedCsiIdempotency:
+      #    enabled: true
+      #  onlineVolumeExtend:
+      #    enabled: true
+      #  storageClass:
+      #    allowVolumeExpansion: true
+      #    datastoreURL: ds:///vmfs/volumes/561cefe9-c48b8eaa/
+      #  triggerCsiFullsync:
+      #    enabled: true
       rke2-calico: {}
     etcd:
       disableSnapshots: false
