@@ -27,7 +27,7 @@ spec:
   rkeConfig:
     machineSelector-Config:
       - config:
-          cloud-provider-name: vsphere
+          cloud-provider-name: rancher-vsphere
           protect-kernel-defaults: false
     chartValues:
       #rancher-vsphere-cpi:
